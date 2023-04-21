@@ -60,7 +60,8 @@ public class ItemServiceIMPL implements ItemService {
         Item item=itemMapper.itemSaveRequestDtoToItem(ItemSaveRequestDTO);
 
         //---ItemSaveRequestDTO type ----------convert------------>Item type [[with model mapper]]
-    //    Item item=modelMapper.map(ItemSaveRequestDTO,Item.class);
+    //    Item item=modelMapper.map(
+        //    ,Item.class);
 
         if(item.getMeasuringUnitType().equals("KILO_GRAM")|| item.getMeasuringUnitType().equals("LITER")|| item.getMeasuringUnitType().equals("GRAM")
                 || item.getMeasuringUnitType().equals("MILLI_LITER") || item.getMeasuringUnitType().equals("NUMBER") ){

@@ -4,6 +4,7 @@ import com.POS_System.POS_Application.dao.CustomerDAO;
 import com.POS_System.POS_Application.dto.CustomerDTO;
 import com.POS_System.POS_Application.dto.request.CustomerUpdateDTO;
 import com.POS_System.POS_Application.entity.Customer;
+import com.POS_System.POS_Application.exception.NotFoundException;
 import com.POS_System.POS_Application.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -116,7 +117,7 @@ public class CustomerServiceIMPL implements CustomerService {
            }
            return customerDTOList;
        }else {
-           throw new RuntimeException("NOT FOUND");
+           throw new NotFoundException("NOT FOUND");
        }
     }
 
